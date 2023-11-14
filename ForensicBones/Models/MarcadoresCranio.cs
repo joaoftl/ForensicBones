@@ -20,7 +20,7 @@ namespace ForensicBones.Models
         public char ResultadoSexo { get; set; }
         public string Observacoes { get; set; }
 
-        public char EstimativaSexo ()
+        public char EstimativaSexo()
         {
             string marcadores = $"{CristaNucal}{ProcessoMastoide}{EminenciaMentoniana}{SupraOrbital}{AreaGlabela}";
 
@@ -36,7 +36,6 @@ namespace ForensicBones.Models
 
             return sexoEstimado;
         }
-    }
 
-    
+    }    
 }

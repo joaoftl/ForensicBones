@@ -11,11 +11,9 @@ namespace ForensicBones.Models
         public string Observacoes { get; set; }
 
         [ForeignKey("Relatorio")]
-        [Column(Order = 2)]
-        public int idRelatorio { get; set; }
-     
-        }
-    }
+        [Column(Order = 1)]
+        public int IdRelatorio { get; set; }
 
-   
+    }
 }
+

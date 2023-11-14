@@ -9,8 +9,7 @@ namespace ForensicBones.Models
         public int Id { get; set; }
 
         [ForeignKey("InventarioEsqueleto")]
-        [Column(Order = 1)]
-        [Required]
+        [Column(Order = 1)]       
         public int IdInventarioEsqueleto { get; set; }
 
         public int Frontal { get; set; }
