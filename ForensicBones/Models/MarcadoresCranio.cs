@@ -36,6 +36,5 @@ namespace ForensicBones.Models
 
             return sexoEstimado;
         }
-
-    }    
+    }
 }

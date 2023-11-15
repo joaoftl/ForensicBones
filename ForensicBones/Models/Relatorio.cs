@@ -9,8 +9,8 @@ namespace ForensicBones.Models
     {
         [Key]
         public int Id { get; set; }        
-        [Required(ErrorMessage = "Código do relatório obrigatório")]
-                
+
+        [Required(ErrorMessage = "Código do relatório obrigatório")]               
         public string Codigo { get; set; }
 
         [ForeignKey("Usuario")]
