@@ -14,6 +14,10 @@ namespace ForensicBones.Models
         [Column(Order = 1)]
         public int IdRelatorio { get; set; }
 
+        [ForeignKey("InventarioCranio")]
+        [Column(Order = 2)]
+        public int IdInventarioCranio { get; set; }
+
     }
 }
 

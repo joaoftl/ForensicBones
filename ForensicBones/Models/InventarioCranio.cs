@@ -12,6 +12,14 @@ namespace ForensicBones.Models
         [Column(Order = 1)]       
         public int IdInventarioEsqueleto { get; set; }
 
+        [ForeignKey("MarcadoresCranio")]
+        [Column(Order = 2)]
+        public int IdMarcadoresCranio { get; set; }
+
+        [ForeignKey("DescricaoCranio")]
+        [Column(Order = 3)]
+        public int IdDescricaoCranio { get; set; }
+
         public int Frontal { get; set; }
         public int Ocipital { get; set; }
         public int Esfenoide { get; set; }
