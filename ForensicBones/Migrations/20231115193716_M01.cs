@@ -4,7 +4,7 @@
 
 namespace ForensicBones.Migrations
 {
-    public partial class M01AddTableUsuario_Relatorio_InvEsq_InvCr_MarcCr : Migration
+    public partial class M01 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -58,6 +58,26 @@ namespace ForensicBones.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MarcadoresCranios",
+                columns: table => new
+                {
+                    IdInventarioCranio = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CristaNucal = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    ProcessoMastoide = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    EminenciaMentoniana = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    SupraOrbital = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    AreaGlabela = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    ResultadoSexo = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    Observacoes = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MarcadoresCranios", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Relatorios",
                 columns: table => new
                 {
@@ -98,6 +118,9 @@ namespace ForensicBones.Migrations
 
             migrationBuilder.DropTable(
                 name: "InventariosEsqueleto");
+
+            migrationBuilder.DropTable(
+                name: "MarcadoresCranios");
 
             migrationBuilder.DropTable(
                 name: "Relatorios");

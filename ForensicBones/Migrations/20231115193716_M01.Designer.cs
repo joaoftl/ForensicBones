@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForensicBones.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231114231326_M01-AddTableUsuario_Relatorio_InvEsq_InvCr_MarcCr")]
-    partial class M01AddTableUsuario_Relatorio_InvEsq_InvCr_MarcCr
+    [Migration("20231115193716_M01")]
+    partial class M01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -124,6 +124,50 @@ namespace ForensicBones.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("InventariosEsqueleto");
+                });
+
+            modelBuilder.Entity("ForensicBones.Models.MarcadoresCranio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AreaGlabela")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<string>("CristaNucal")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<string>("EminenciaMentoniana")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<int>("IdInventarioCranio")
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    b.Property<string>("Observacoes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProcessoMastoide")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<string>("ResultadoSexo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<string>("SupraOrbital")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MarcadoresCranios");
                 });
 
             modelBuilder.Entity("ForensicBones.Models.Relatorio", b =>

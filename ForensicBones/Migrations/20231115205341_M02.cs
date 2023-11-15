@@ -4,7 +4,7 @@
 
 namespace ForensicBones.Migrations
 {
-    public partial class M02AddTableMarcadoresCranio : Migration
+    public partial class M02 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

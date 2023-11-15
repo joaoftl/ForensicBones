@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForensicBones.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231115011312_M02-AddTableMarcadoresCranio")]
-    partial class M02AddTableMarcadoresCranio
+    [Migration("20231115205341_M02")]
+    partial class M02
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,6 +22,86 @@ namespace ForensicBones.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+
+            modelBuilder.Entity("ForensicBones.Models.DescricaoCranio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CartilagemTireoide")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ConchaNasalDir")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ConchaNasalEsq")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Esfenoide")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EtmoideDir")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EtmoideEsq")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Frontal")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Hioide")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IdInventarioCranio")
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    b.Property<string>("LacrimalDir")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LacrimalEsq")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mandibula")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Maxilar")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NasalEsq")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ocipital")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ParietalDir")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ParietalEsq")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TemporalDir")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TemporalEsq")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Vomer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ZigomaticoDir")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ZigomaticoEsq")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DescricoesCranios");
+                });
 
             modelBuilder.Entity("ForensicBones.Models.InventarioCranio", b =>
                 {
@@ -55,9 +135,17 @@ namespace ForensicBones.Migrations
                     b.Property<int>("Hioide")
                         .HasColumnType("int");
 
+                    b.Property<int>("IdDescricaoCranio")
+                        .HasColumnType("int")
+                        .HasColumnOrder(3);
+
                     b.Property<int>("IdInventarioEsqueleto")
                         .HasColumnType("int")
                         .HasColumnOrder(1);
+
+                    b.Property<int>("IdMarcadoresCranio")
+                        .HasColumnType("int")
+                        .HasColumnOrder(2);
 
                     b.Property<int>("LacrimalDir")
                         .HasColumnType("int");
@@ -114,6 +202,10 @@ namespace ForensicBones.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("IdInventarioCranio")
+                        .HasColumnType("int")
+                        .HasColumnOrder(2);
+
                     b.Property<int>("IdRelatorio")
                         .HasColumnType("int")
                         .HasColumnOrder(1);
@@ -124,6 +216,50 @@ namespace ForensicBones.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("InventariosEsqueleto");
+                });
+
+            modelBuilder.Entity("ForensicBones.Models.MarcadoresCranio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AreaGlabela")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<string>("CristaNucal")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<string>("EminenciaMentoniana")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<int>("IdInventarioCranio")
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    b.Property<string>("Observacoes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProcessoMastoide")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<string>("ResultadoSexo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.Property<string>("SupraOrbital")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MarcadoresCranios");
                 });
 
             modelBuilder.Entity("ForensicBones.Models.Relatorio", b =>

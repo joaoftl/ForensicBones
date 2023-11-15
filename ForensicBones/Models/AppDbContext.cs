@@ -12,5 +12,6 @@ namespace ForensicBones.Models
 
         public DbSet<DescricaoCranio> DescricoesCranios { get; set; }
         public DbSet<MarcadoresCranio> MarcadoresCranios { get; set; }
+        public object DescricaoCranios { get; internal set; }
     }
 }
