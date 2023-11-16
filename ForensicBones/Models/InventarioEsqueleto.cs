@@ -12,12 +12,12 @@ namespace ForensicBones.Models
 
         [ForeignKey("Relatorio")]
         [Column(Order = 1)]
-        [Display(Name = "Id Relatório")]
+        [Display(Name = "Id do Relatório")]
         public int IdRelatorio { get; set; }
 
         [ForeignKey("InventarioCranio")]
         [Column(Order = 2)]
-        [Display(Name = "Id Inventário Crânio")]
+        [Display(Name = "Id Inventário do Crânio")]
         public int IdInventarioCranio { get; set; }
 
     }
