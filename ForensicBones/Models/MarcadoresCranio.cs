@@ -10,16 +10,24 @@ namespace ForensicBones.Models
 
         [ForeignKey("InventarioCranio")]
         [Column(Order = 1)]
+        [Display(Name = "Id Inventário Crânio")]
         public int IdInventarioCranio { get; set; }
-
+        [Display(Name = "Crista Nucal")]
         public char CristaNucal { get; set; }
+        [Display(Name = "Processo Mastóide")]
         public char ProcessoMastoide { get; set; }
+        [Display(Name = "Eminência Mentoniana")]
         public char EminenciaMentoniana { get; set; }
+        [Display(Name = "Supra Orbital")]
         public char SupraOrbital { get; set; }
+        [Display(Name = "Área da Glabela")]
         public char AreaGlabela { get; set; }
+        [Display(Name = "Resultado da Estimativa de Sexo")]
         public char ResultadoSexo { get; set; }
+        [Display(Name = "Observações")]
         public string Observacoes { get; set; }
 
+        [Display(Name = "Cálculo da Estimativa de Sexo")]
         public char EstimativaSexo()
         {
             string marcadores = $"{CristaNucal}{ProcessoMastoide}{EminenciaMentoniana}{SupraOrbital}{AreaGlabela}";

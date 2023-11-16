@@ -4,17 +4,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ForensicBones.Controllers
 {
-    public class RelatoriosController : Controller
+    public class InventariosCranioController : Controller
     {
-        private readonly AppDbContext _context; 
-        public RelatoriosController(AppDbContext context)
+        private readonly AppDbContext _context;
+        public InventariosCranioController(AppDbContext context)
         {
             _context = context;
         }
 
         public async Task<IActionResult> Index()
         {
-            var dados = await _context.Relatorios.ToListAsync();
+            var dados = await _context.InventariosCranio.ToListAsync();
             return View(dados);
         }
         public IActionResult Create()
@@ -22,11 +22,11 @@ namespace ForensicBones.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Relatorio relatorio)
+        public async Task<IActionResult> Create(InventarioCranio inventariocranio)
         {
             if (ModelState.IsValid)
             {
-                _context.Relatorios.Add(relatorio);
+                _context.InventariosCranio.Add(inventariocranio);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }

@@ -1,0 +1,68 @@
+﻿@model ForensicBones.Models.MarcadoresCranio
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MarcadoresCranio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdInventarioCranio" class="control-label"></label>
+                <input asp-for="IdInventarioCranio" class="form-control" />
+                <span asp-validation-for="IdInventarioCranio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CristaNucal" class="control-label"></label>
+                <input asp-for="CristaNucal" class="form-control" />
+                <span asp-validation-for="CristaNucal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProcessoMastoide" class="control-label"></label>
+                <input asp-for="ProcessoMastoide" class="form-control" />
+                <span asp-validation-for="ProcessoMastoide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EminenciaMentoniana" class="control-label"></label>
+                <input asp-for="EminenciaMentoniana" class="form-control" />
+                <span asp-validation-for="EminenciaMentoniana" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupraOrbital" class="control-label"></label>
+                <input asp-for="SupraOrbital" class="form-control" />
+                <span asp-validation-for="SupraOrbital" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AreaGlabela" class="control-label"></label>
+                <input asp-for="AreaGlabela" class="form-control" />
+                <span asp-validation-for="AreaGlabela" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResultadoSexo" class="control-label"></label>
+                <input asp-for="ResultadoSexo" class="form-control" />
+                <span asp-validation-for="ResultadoSexo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Observacoes" class="control-label"></label>
+                <input asp-for="Observacoes" class="form-control" />
+                <span asp-validation-for="Observacoes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

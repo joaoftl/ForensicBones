@@ -17,5 +17,20 @@ namespace ForensicBones.Controllers
             var dados = await _context.MarcadoresCranios.ToListAsync();
             return View(dados);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Create(MarcadoresCranio marcadorescranio)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.MarcadoresCranios.Add(marcadorescranio);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
     }
 }

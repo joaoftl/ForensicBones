@@ -1,0 +1,179 @@
+﻿@model IEnumerable<ForensicBones.Models.InventarioCranio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdInventarioEsqueleto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdMarcadoresCranio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdDescricaoCranio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Frontal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ocipital)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Esfenoide)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maxilar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParietalEsq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TemporalEsq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConchaNasalEsq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EtmoideEsq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LacrimalEsq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NasalEsq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZigomaticoEsq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParietalDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TemporalDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConchaNasalDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EtmoideDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LacrimalDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZigomaticoDir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hioide)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CartilagemTireoide)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mandibula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observacoes)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdInventarioEsqueleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdMarcadoresCranio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdDescricaoCranio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Frontal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ocipital)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Esfenoide)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maxilar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParietalEsq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TemporalEsq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConchaNasalEsq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EtmoideEsq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LacrimalEsq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NasalEsq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZigomaticoEsq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParietalDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TemporalDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConchaNasalDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EtmoideDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LacrimalDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZigomaticoDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hioide)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CartilagemTireoide)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mandibula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacoes)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
