@@ -1,0 +1,168 @@
+﻿@model ForensicBones.Models.InventarioCranio
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>InventarioCranio</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdInventarioEsqueleto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdInventarioEsqueleto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdMarcadoresCranio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdMarcadoresCranio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdDescricaoCranio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdDescricaoCranio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Frontal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Frontal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ocipital)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ocipital)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Esfenoide)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Esfenoide)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Maxilar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Maxilar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vomer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vomer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParietalEsq)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParietalEsq)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TemporalEsq)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TemporalEsq)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ConchaNasalEsq)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ConchaNasalEsq)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EtmoideEsq)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EtmoideEsq)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LacrimalEsq)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LacrimalEsq)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NasalEsq)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NasalEsq)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ZigomaticoEsq)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ZigomaticoEsq)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ParietalDir)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ParietalDir)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TemporalDir)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TemporalDir)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ConchaNasalDir)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ConchaNasalDir)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EtmoideDir)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EtmoideDir)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LacrimalDir)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LacrimalDir)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ZigomaticoDir)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ZigomaticoDir)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Hioide)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hioide)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CartilagemTireoide)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CartilagemTireoide)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mandibula)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mandibula)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Observacoes)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

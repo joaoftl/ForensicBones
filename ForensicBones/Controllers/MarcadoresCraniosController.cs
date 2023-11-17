@@ -64,5 +64,41 @@ namespace ForensicBones.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var dados = await _context.MarcadoresCranios.FindAsync(id);
+            if (dados == null)
+                return NotFound();
+
+            return View(dados);
+        }
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var dados = await _context.MarcadoresCranios.FindAsync(id);
+            if (dados == null)
+                return NotFound();
+
+            return View(dados);
+        }
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var dados = await _context.MarcadoresCranios.FindAsync(id);
+            if (dados == null)
+                return NotFound();
+
+            _context.MarcadoresCranios.Remove(dados);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
     }
 }
