@@ -32,5 +32,37 @@ namespace ForensicBones.Controllers
             }
             return View();
         }
+
+        // Edit
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var dados = await _context.Inventarios.FindAsync(id);
+
+            if (dados == null)
+                return NotFound();
+
+            return View(dados);
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, InventarioEsqueleto inventarioesqueleto)
+        {
+            if (id != inventarioesqueleto.Id)
+                return NotFound();
+
+            if (ModelState.IsValid)
+            {
+                _context.Inventarios.Update(inventarioesqueleto);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
     }
 }
